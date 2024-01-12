@@ -6,6 +6,10 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
 }
+.modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
 .top-header {
   background-color: white;
   position: sticky;
@@ -79,12 +83,12 @@ body {
   font-size: 30px;
 }
 .about-me__introduction {
-  font-family: "Spectral", 'Times New Roman', Times, serif;
+  font-family: "Spectral", "Times New Roman", Times, serif;
   font-weight: 800;
   font-style: italic;
   width: 60%;
 }
-#about-me .h6{
+#about-me .h6 {
   font-size: 1rem;
 }
 #about-me p {
@@ -124,6 +128,22 @@ body {
   object-fit: cover;
   padding: 0.5em;
 }
+.gallery-animation{
+  transform-origin: 0% 0%;
+  animation: 0.3s ease-out galleryAnim forwards;
+}
+@keyframes galleryAnim {
+  from{
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+  to{
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .mg-prev,
 .mg-next {
   width: 30px;
@@ -136,19 +156,19 @@ body {
 }
 
 .quote {
-  font-family: "Spectral", 'Times New Roman', Times, serif;
+  font-family: "Spectral", "Times New Roman", Times, serif;
   font-style: italic;
   width: 70%;
   margin: auto;
   padding-block: 3em;
 }
 .quote__text {
-  font-family: Spectral, 'Times New Roman', Times, serif;
+  font-family: Spectral, "Times New Roman", Times, serif;
   font-style: italic;
   font-weight: 300;
 }
 .quote__author {
-  font-family: Spectral, 'Times New Roman', Times, serif;
+  font-family: Spectral, "Times New Roman", Times, serif;
   font-weight: 800;
   font-size: 22px;
 }
