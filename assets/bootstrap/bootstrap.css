@@ -1065,6 +1065,7 @@ textarea {
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal-dialog {
@@ -1074,8 +1075,16 @@ textarea {
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
+  animation: 0.3s ease-out fadeAnim forwards;
   transition: transform 0.3s ease-out;
-  transform: translate(0, -50px);
+  transform: translateY(-50px);
+  opacity: 0;
+}
+@keyframes fadeAnim{
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
